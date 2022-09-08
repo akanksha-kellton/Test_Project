@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="161" id="KGk-i7-Jjw" customClass="UserProfile" customModule="AKTest6" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-dk-wk6">
+                        <rect key="frame" x="70" y="12.5" width="170" height="99"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="170" id="GPo-Zo-TBL"/>
+                            <constraint firstAttribute="height" constant="100" id="sAV-yx-i1O"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5f-s0-AfT">
+                        <rect key="frame" x="70" y="113" width="170" height="33"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Select Profile Pic">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="setImageBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kYs-ir-Ifg"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="i3z-dk-wk6" secondAttribute="trailing" constant="54" id="0bx-Uu-W77"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="f5f-s0-AfT" secondAttribute="trailing" constant="54" id="1KL-jF-P7k"/>
+                    <constraint firstItem="f5f-s0-AfT" firstAttribute="top" secondItem="i3z-dk-wk6" secondAttribute="bottom" constant="1" id="M6G-OK-YMh"/>
+                    <constraint firstItem="i3z-dk-wk6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="54" id="P8n-tO-Qoz"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="f5f-s0-AfT" secondAttribute="bottom" constant="4" id="QiJ-UC-fh4"/>
+                    <constraint firstAttribute="trailing" secondItem="i3z-dk-wk6" secondAttribute="trailing" constant="70" id="fNn-Wh-qjV"/>
+                    <constraint firstItem="f5f-s0-AfT" firstAttribute="top" secondItem="i3z-dk-wk6" secondAttribute="bottom" constant="1" id="nNY-FV-1Jk"/>
+                    <constraint firstItem="f5f-s0-AfT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="54" id="tAL-Vl-Z5O"/>
+                    <constraint firstItem="f5f-s0-AfT" firstAttribute="top" secondItem="i3z-dk-wk6" secondAttribute="bottom" constant="1" id="u6m-xI-6e0"/>
+                    <constraint firstItem="i3z-dk-wk6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="70" id="uU5-0d-rvy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="setImage" destination="f5f-s0-AfT" id="wSS-gz-4Me"/>
+                <outlet property="userImage" destination="i3z-dk-wk6" id="hlC-GV-j0m"/>
+            </connections>
+            <point key="canvasLocation" x="260.86956521739131" y="71.986607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
